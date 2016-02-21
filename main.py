@@ -37,7 +37,7 @@ try:
 		GPIO.output(13, True)
 		GPIO.output(15, True)
 
-		if GPIO.input(29) != True:
+		if GPIO.input(29) != False:
 			GPIO.output(11, True)
 			GPIO.output(13, False)
 			speakerPin.start(50.0)
