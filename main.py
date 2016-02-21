@@ -26,9 +26,9 @@ http = urllib3.PoolManager()
 print str(request)
 
 
-camera = picamera.PiCamera();
+camera = picamera.PiCamera()
 
-while (1) {
+while (1) 
 
 	#Pin 11: Green LED
 	#Pin 13: Red LED
@@ -37,7 +37,7 @@ while (1) {
 	GPIO.output(13, True)
 	GPIO.output(15, True)
 
-	if (!GPIO.input(29)) {
+	if (!GPIO.input(29)) 
 		GPIO.output(11, True)
 		GPIO.output(13, False)
 		speakerPin.start(50.0)
@@ -51,7 +51,7 @@ while (1) {
 		#contentID = request.headers.['content_id']
 		#messageString = "https://api.mogreet.com/moms/transaction.send?client_id=7225&token=2449acf48398a0887e21d96de8369911&"+contentID+"&to=+13176051723&campaign_id=123086&message=Intruder%20alert%21"
 #messageRequest = http.request('GET', messageString)
-	}
+	
 	p.stop()
-}
+
 GPIO.cleanup()
