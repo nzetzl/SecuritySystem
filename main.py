@@ -28,7 +28,7 @@ print str(request)
 
 camera = picamera.PiCamera()
 
-while (1) 
+while (1)
 
 	#Pin 11: Green LED
 	#Pin 13: Red LED
@@ -37,7 +37,7 @@ while (1)
 	GPIO.output(13, True)
 	GPIO.output(15, True)
 
-	if (!GPIO.input(29)) 
+	if (!GPIO.input(29))
 		GPIO.output(11, True)
 		GPIO.output(13, False)
 		speakerPin.start(50.0)
