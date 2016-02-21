@@ -31,9 +31,9 @@ try:
 		#Pin 13: Red LED
 		#Pin 15: Blue LED
 		#if GPIO.input(31) == False:
-			GPIO.output(11, False)
-			GPIO.output(13, True)
-			GPIO.output(15, True)
+		GPIO.output(11, False)
+		GPIO.output(13, True)
+		GPIO.output(15, True)
 
 		if GPIO.input(31) == False:
 			GPIO.output(11, True)
