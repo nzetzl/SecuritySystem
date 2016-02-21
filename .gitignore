@@ -30,3 +30,7 @@
 
 # Debug files
 *.dSYM/
+
+# Movie files
+*.mp4
+*.h264
