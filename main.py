@@ -16,7 +16,7 @@ try:
 	GPIO.setup(11, GPIO.OUT)	
 	GPIO.setup(13, GPIO.OUT)
 	GPIO.setup(15, GPIO.OUT)
-	GPIO.setup(31, GPIO.IN)
+	GPIO.setup(31, GPIO.IN, pull_up_down=GPIO.UP)
 	GPIO.setup(33, GPIO.OUT)
 
 	speakerPin = GPIO.PWM(33, 335)
@@ -35,7 +35,7 @@ try:
 			GPIO.output(13, False)
 			GPIO.output(15, True)
 
-		if GPIO.input(31) == False:
+		if GPIO.input(31) == True:
 			GPIO.output(11, True)
 			GPIO.output(13, True)
 			GPIO.output(15, False)
