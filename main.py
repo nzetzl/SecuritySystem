@@ -14,12 +14,12 @@ try:
 	#Pin 11: Green LED
 	#Pin 13: Red LED
 	#Pin 15: Blue LED
-	#Pin 29: Motion Sensor
+	#Pin 31: Motion Sensor
 	#Pin 33: Speaker
 	GPIO.setup(11, GPIO.OUT)
 	GPIO.setup(13, GPIO.OUT)
 	GPIO.setup(15, GPIO.OUT)
-	GPIO.setup(29, GPIO.IN)
+	GPIO.setup(31, GPIO.IN)
 	GPIO.setup(33, GPIO.OUT)
 
 	speakerPin = GPIO.PWM(33, 335)
@@ -33,12 +33,12 @@ try:
 		#Pin 11: Green LED
 		#Pin 13: Red LED
 		#Pin 15: Blue LED
-		if GPIO.input(29) == False:
+		if GPIO.input(31) == False:
 			GPIO.output(11, False)
 			GPIO.output(13, True)
 			GPIO.output(15, True)
 
-		elif GPIO.input(29) != False:
+		elif GPIO.input(31) != False:
 			GPIO.output(11, True)
 			GPIO.output(13, False)
 			speakerPin.start(50.0)
