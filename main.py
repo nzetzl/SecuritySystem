@@ -8,7 +8,6 @@ import RPi.GPIO as GPIO
 
 import picamera
 	
-try:
 
 	GPIO.setmode(GPIO.BOARD)
 	#Pin 11: Green LED
@@ -53,7 +52,3 @@ try:
 #messageRequest = http.request('GET', messageString)
 	
 		speakerPin.stop()
-except KeyboardInterrupt:
-	print "Program stopped by user."
-finally:
-	GPIO.cleanup()
