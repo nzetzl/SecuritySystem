@@ -43,8 +43,8 @@ try:
 			GPIO.output(13, False)
 			GPIO.output(15, True)
 			speakerPin.start(50.0)
-			camera.capture('img0'+ num+ '.jpg')
-			camera.start_recording('video' + num+'.h264')
+			camera.capture('img0'+ str(num)+ '.jpg')
+			camera.start_recording('video' + str(num)+'.h264')
 			sleep(5)
 			camera.stop_recording()
 
