@@ -25,7 +25,6 @@ try:
 	speakerPin = GPIO.PWM(33, 335)
 
 	http = urllib3.PoolManager()
-	print str(request)
 
 
 	camera = picamera.PiCamera()
@@ -56,7 +55,5 @@ try:
 		speakerPin.stop()
 except KeyboardInterrupt:
 	print "Program stopped by user."
-except:
-	print "Program stopped unexpectedly!"
 finally:
 	GPIO.cleanup()
