@@ -28,7 +28,7 @@ print str(request)
 
 camera = picamera.PiCamera()
 
-while (1)
+while (true)
 
 	#Pin 11: Green LED
 	#Pin 13: Red LED
