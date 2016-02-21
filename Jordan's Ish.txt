@@ -11,11 +11,13 @@ void loop()
   digitalWrite(5, LOW); //green on
   digitalWrite(7, HIGH); //blue off
   digitalWrite(6, HIGH); // red off
-    
+  noTone(3);
+  
   if (digitalRead(4) == LOW)
   {
     digitalWrite(6, LOW);  // red on
     digitalWrite(5, HIGH); //green off
-    delay(20000);
+    tone(3,355);
+    delay(5000);
   }
 }
