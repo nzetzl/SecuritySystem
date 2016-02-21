@@ -6,6 +6,8 @@ import RPi.GPIO as GPIO
 
 import picamera
 
+import subprocess
+
 try:
 	GPIO.setmode(GPIO.BOARD)
 	#Pin 11: Green LED
@@ -25,6 +27,7 @@ try:
 
 
 	camera = picamera.PiCamera()
+	num = 0;
 
 	while True:
 		#Pin 11: Green LED
@@ -40,8 +43,8 @@ try:
 			GPIO.output(13, False)
 			GPIO.output(15, True)
 			speakerPin.start(50.0)
-			camera.capture('img01.jpg')
-			camera.start_recording('video.h264')
+			camera.capture('img0'+ num+ '.jpg')
+			camera.start_recording('video' + num+'.h264')
 			sleep(5)
 			camera.stop_recording()
 
