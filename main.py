@@ -23,7 +23,7 @@ try:
 
 	speakerPin = GPIO.PWM(33, 335)
 
-	http = urllib3.PoolManager()
+#http = urllib3.PoolManager()
 
 
 	camera = picamera.PiCamera()
@@ -33,13 +33,14 @@ try:
 		#Pin 13: Red LED
 		#Pin 15: Blue LED
 		if GPIO.input(31) == False:
-			GPIO.output(11, False)
-			GPIO.output(13, True)
-			GPIO.output(15, True)
-
-		elif GPIO.input(31) != False:
 			GPIO.output(11, True)
 			GPIO.output(13, False)
+			GPIO.output(15, True)
+
+		elif GPIO.input(31) == True:
+			GPIO.output(11, True)
+			GPIO.output(13, True)
+			GPIO.output(15, False)
 			speakerPin.start(50.0)
 			camera.capture('img01.jpg')
 			camera.start_recording('video.h264')
